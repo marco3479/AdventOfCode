@@ -33,7 +33,6 @@ class Rucksacks {
                         if (i1 === i3) { 
                             matchedItem = i1;
                             Break = true;
-                            // console.log(matchedItem);
                             break
                         };
                     }
@@ -60,7 +59,6 @@ for (let inp of input3A) {
     count++;
     batch.push(inp);
     if (count === 3) {
-        console.log(batch);
         newInps.push(batch);
         batch = [];
         count = 0;
@@ -71,7 +69,7 @@ for (let inp of input3A) {
 
 let priorities: number = 0;
 for (let batch of newInps) {
-    priorities += (new Rucksacks(batch).priority);
+    priorities += new Rucksacks(batch).priority;
 }
 // console.log(priorities);
 
